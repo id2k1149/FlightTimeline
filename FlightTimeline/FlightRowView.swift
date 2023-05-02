@@ -16,6 +16,7 @@ struct FlightRowView: View {
                 .frame(width: 120, alignment: .leading)
             Text(flight.otherAirport)
                 .frame(alignment: .leading)
+            Spacer()
             Text(flight.flightStatus)
                 .frame(alignment: .trailing)
             
