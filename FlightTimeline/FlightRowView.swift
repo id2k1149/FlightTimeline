@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FlightRowView: View {
+    @State private var isPresented = false
     let flight: FlightInformation
     
     var body: some View {
@@ -20,6 +21,9 @@ struct FlightRowView: View {
             Text(flight.flightStatus)
                 .frame(alignment: .trailing)
             
+        }
+        .sheet(isPresented: $isPresented) {
+            FlightDetailsView(flight: flight)
         }
     }
 }
