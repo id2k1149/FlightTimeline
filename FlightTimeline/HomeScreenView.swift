@@ -36,6 +36,7 @@ struct HomeScreenView: View {
                 .font(.title)
                 .padding()
             }
+            .navigationTitle("Airport")
         }
     }
 }
