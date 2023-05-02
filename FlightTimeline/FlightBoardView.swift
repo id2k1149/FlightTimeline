@@ -13,8 +13,7 @@ struct FlightBoardView: View {
     
     var body: some View {
         List(flightInfo) { flight in
-            Text("\(flight.airline) \(flight.number)")
-            Text("\(flight.flightStatus)")
+            FlightRowView(flight: flight)
         }
         .navigationTitle(boardName)
         .listStyle(.plain)
