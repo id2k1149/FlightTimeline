@@ -12,14 +12,11 @@ struct FlightBoardView: View {
     let flightInfo: [FlightInformation]
     
     var body: some View {
-        VStack {
-            Text(boardName)
-                .font(.title)
-            List(flightInfo) { flight in
-                Text("\(flight.airline) \(flight.number)")
-                Text("\(flight.flightStatus)")
-            }
+        List(flightInfo) { flight in
+            Text("\(flight.airline) \(flight.number)")
+            Text("\(flight.flightStatus)")
         }
+        .navigationTitle(boardName)
     }
 }
 
