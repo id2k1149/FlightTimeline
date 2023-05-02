@@ -11,7 +11,7 @@ struct FlightDetailsView: View {
     let flight: FlightInformation
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Text("\(flight.airline) \(flight.number)")
                     .font(.largeTitle)
