@@ -15,7 +15,7 @@ struct FlightBoardView: View {
         VStack {
             Text(boardName)
                 .font(.title)
-            ForEach(flightInfo, id: \.self) { flight in
+            ForEach(flightInfo, id: \.id) { flight in
                 Text("\(flight.airline) \(flight.number)")
             }
         }
