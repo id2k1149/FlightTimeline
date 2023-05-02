@@ -24,7 +24,8 @@ struct FlightRowView: View {
                 
             }
             .sheet(isPresented: $isPresented) {
-                FlightDetailsView(flight: flight)
+                FlightDetailsView(isPresented: $isPresented,
+                                  flight: flight)
             }
         }
     }
