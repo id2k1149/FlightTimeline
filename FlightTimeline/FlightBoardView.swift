@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FlightBoardView: View {
     let boardName: String
+    let flightInfo: [FlightInformation]
     
     var body: some View {
         Text(boardName)
@@ -17,6 +18,9 @@ struct FlightBoardView: View {
 
 struct FlightBoardView_Previews: PreviewProvider {
     static var previews: some View {
-        FlightBoardView(boardName: "Arrival")
+        FlightBoardView(
+            boardName: "Arrival",
+            flightInfo: FlightInformation.generateFlights()
+        )
     }
 }
