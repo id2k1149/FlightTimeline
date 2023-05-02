@@ -12,8 +12,14 @@ struct FlightBoardView: View {
     let flightInfo: [FlightInformation]
     
     var body: some View {
-        Text(boardName)
-        .font(.title)    }
+        VStack {
+            Text(boardName)
+                .font(.title)
+            ForEach(flightInfo, id: \.self) { flight in
+                Text("\(flight.airline) \(flight.number)")
+            }
+        }
+    }
 }
 
 struct FlightBoardView_Previews: PreviewProvider {
