@@ -17,6 +17,7 @@ struct FlightBoardView: View {
             Text("\(flight.flightStatus)")
         }
         .navigationTitle(boardName)
+        .listStyle(.plain)
     }
 }
 
